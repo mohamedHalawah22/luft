@@ -62,7 +62,7 @@ export default function SetPasswordForm({
     },
   });
 
-  const { mutateAsync } = useMutation({
+  const { mutateAsync, isSuccess } = useMutation({
     mutationFn: onSubmit,
     onMutate: () => {
       setServerError(undefined);
@@ -83,7 +83,13 @@ export default function SetPasswordForm({
         onSubmit={onFormSubmit}
       >
         <AuthFormLayout
-          {...{ title, description, submitBtnLabel, serverError }}
+          {...{
+            title,
+            description,
+            submitBtnLabel,
+            serverError,
+            isFormRedirecting: isSuccess,
+          }}
         >
           <CustomPasswordInput
             required

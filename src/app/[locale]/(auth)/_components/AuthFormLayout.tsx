@@ -3,6 +3,7 @@ import React, { ReactNode } from 'react';
 import { useFormContext } from 'react-hook-form';
 
 import FormServerError from '@/components/shared/FormServerError';
+import Overlay from '@/components/shared/Overlay';
 import { Button } from '@/components/ui/button';
 
 type AuthFormLayoutProps = {
@@ -11,6 +12,7 @@ type AuthFormLayoutProps = {
   children: ReactNode;
   submitBtnLabel: string;
   serverError?: string;
+  isFormRedirecting?: boolean;
 };
 
 export default function AuthFormLayout({
@@ -19,6 +21,7 @@ export default function AuthFormLayout({
   children,
   submitBtnLabel,
   serverError,
+  isFormRedirecting,
 }: AuthFormLayoutProps) {
   const form = useFormContext();
   const { isSubmitting } = form.formState;
@@ -30,7 +33,10 @@ export default function AuthFormLayout({
         <p className='text-lg font-normal text-grayish-400'>{description}</p>
       </div>
       <div className='flex flex-col gap-8'>
-        <div className='flex flex-col gap-4'>{children}</div>
+        <div className='relative flex flex-col gap-4'>
+          {children}
+          {isFormRedirecting && <Overlay />}
+        </div>
         <div className='flex flex-col gap-2'>
           {serverError && <FormServerError>{serverError}</FormServerError>}
 
@@ -38,7 +44,7 @@ export default function AuthFormLayout({
             variant={'default'}
             className='h-12 py-3.5'
             type='submit'
-            disabled={isSubmitting}
+            disabled={isSubmitting || isFormRedirecting}
           >
             {submitBtnLabel}
           </Button>

@@ -13,7 +13,7 @@ import { logout } from '@/api/auth';
 export default function LogoutNavBtn({ token }: { token: string }) {
   const t = useTranslations('common');
 
-  const { mutate, isPending } = useMutation({
+  const { mutate, isPending, isSuccess } = useMutation({
     mutationFn: () => logout(token),
     onSettled: () => {
       signOut({
@@ -28,7 +28,7 @@ export default function LogoutNavBtn({ token }: { token: string }) {
       type='button'
       variant='link'
       onClick={() => mutate()}
-      disabled={isPending}
+      disabled={isPending || isSuccess}
     >
       {t('buttons.logout')}
     </Button>

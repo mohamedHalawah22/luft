@@ -44,7 +44,7 @@ export default function LoginForm() {
     },
   });
 
-  const { mutateAsync } = useMutation({
+  const { mutateAsync, isSuccess } = useMutation({
     mutationFn: login,
     onMutate: () => {
       setServerError(undefined);
@@ -74,6 +74,7 @@ export default function LoginForm() {
           description={t('description')}
           submitBtnLabel={t('buttonLabel')}
           serverError={serverError}
+          isFormRedirecting={isSuccess}
         >
           <CustomInput
             required
