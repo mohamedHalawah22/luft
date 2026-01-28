@@ -4,8 +4,6 @@ import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 
-import Footer from '@/components/layout/Footer';
-import Navbar from '@/components/layout/Navbar/Navbar';
 import { Toaster } from '@/components/ui/sonner';
 
 import { Locale } from '@/i18n/i18n.config';
