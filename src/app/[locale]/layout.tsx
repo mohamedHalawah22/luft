@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 
+import ConnectionListener from '@/components/ConnectionListener';
 import { Toaster } from '@/components/ui/sonner';
 
 import { Locale } from '@/i18n/i18n.config';
@@ -115,6 +116,7 @@ export default async function LocaleLayout({
         }}
       >
         <NextIntlClientProvider messages={messages}>
+          <ConnectionListener />
           {/* <Navbar /> */}
           {children}
           {/* <Footer /> */}

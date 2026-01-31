@@ -103,6 +103,10 @@
     "powerBy": "Powered by",
     "copyright": "© {year} Luft Stay. All rights reserved."
   },
+  "connection": {
+    "lost": "No internet connection",
+    "restored": "Connection restored"
+  },
   "bookFreeConsultation": "Book Free Consultation",
   "messageUs": "Message Us"
 }

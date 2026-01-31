@@ -105,6 +105,10 @@
     "powerBy": "مشغل بواسطة",
     "copyright": "© {year} Luft Stay. جميع الحقوق محفوظة."
   },
+  "connection": {
+    "lost": "لا يوجد اتصال بالإنترنت",
+    "restored": "تم استعادة الاتصال بالإنترنت"
+  },
   "bookFreeConsultation": "احجز استشارة مجانية",
   "messageUs": "راسلنا"
 }
