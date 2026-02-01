@@ -51,7 +51,8 @@
     "toaster": {
       "otpSent": "OTP is sent to your email",
       "failedToSendOtp": "Failed to send OTP please try again"
-    }
+    },
+    "loading": "Loading..."
   },
   "auth": {
     "banner": {
