@@ -154,6 +154,10 @@ export default {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
+      boxShadow: {
+        sm: '0px 4px 20px 0px #1B1B1B12',
+        md: '0px 4px 20px 0px #1B1B1B1A',
+      },
     },
   },
   corePlugins: {
