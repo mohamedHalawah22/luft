@@ -43,7 +43,7 @@ export default function CustomOtpInput({
         <FormItem>
           {label && (
             <FormLabel
-              className={cn('ms-4 text-base font-bold text-grayish-900', {
+              className={cn('ms-4 text-sm text-grayish-900', {
                 'text-error-500': hasError,
               })}
             >

@@ -33,9 +33,7 @@ function CustomTextarea({
       name={fieldName}
       render={({ field }) => (
         <FormItem className={className}>
-          <FormLabel className='text-base font-bold text-grayish-50'>
-            {label}
-          </FormLabel>
+          <FormLabel className='text-sm text-grayish-50'>{label}</FormLabel>
           <FormControl>
             <Textarea
               placeholder={placeholder}

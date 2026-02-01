@@ -38,9 +38,7 @@ const CustomPhoneInput = ({
       name={fieldName}
       render={({ field }) => (
         <FormItem className='flex flex-col items-start'>
-          <FormLabel className='text-base font-bold text-grayish-50'>
-            {label}
-          </FormLabel>
+          <FormLabel className='text-sm text-grayish-50'>{label}</FormLabel>
           <FormControl className='w-full'>
             <PhoneInput
               placeholder={placeholder}
