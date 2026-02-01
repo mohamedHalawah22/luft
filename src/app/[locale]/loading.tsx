@@ -4,13 +4,13 @@ import { useTranslations } from 'next-intl';
 import Spinner from '@/components/shared/Spinner';
 
 function Loading() {
-  const t = useTranslations('common.loading');
+  const t = useTranslations('common');
 
   return (
-    <div className='flex h-dvh w-dvw flex-col items-center justify-center'>
+    <div className='flex h-dvh w-dvw flex-col items-center justify-center gap-4'>
       <Spinner />
       <p className='font-semibold text-grayish-700 md:text-lg xl:text-xl'>
-        {t('text')}
+        {t('loading')}
       </p>
     </div>
   );
